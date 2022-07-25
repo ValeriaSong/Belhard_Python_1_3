@@ -12,7 +12,6 @@
 - square(12) -> (48, 144, 16.970562748477143)
 - square(7) -> (28, 49, 9.899494936611665)
 """
-from math import sqrt
 
 
 def square(side: str) -> tuple:
@@ -24,9 +23,9 @@ def square(side: str) -> tuple:
     :return: Кортеж (Периметр, Площадь, Диагональ)
     :rtype: tuple
     """
+    perim, ploz, diag = float(side) * 4, float(side) * float(side), float(side) * (2**0.5)
 
-
-    return None
+    return perim, ploz, diag
 
 
 if __name__ == '__main__':
