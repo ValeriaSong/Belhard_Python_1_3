@@ -24,11 +24,14 @@ def triangle(side_1: int, side_2: int) -> tuple:
     :return: кортеж с параметрами
     :rtype: tuple
     """
+    gipot = ((side_1 ** 2) + (side_2 ** 2)) ** 0.5
+    perim = gipot + side_1 + side_2
+    plosh = 0.5 * (side_1 * side_2)
 
-    return None
-
+    return int(gipot), int(perim), int(plosh)
 
 if __name__ == '__main__':
+
     side1_val = int(input('Введите длину первого катета: '))
     side2_val = int(input('Введите длину второго катета: '))
     print(f'(Гипотенуза, Периметр, Площадь): {triangle(side1_val, side2_val)}')

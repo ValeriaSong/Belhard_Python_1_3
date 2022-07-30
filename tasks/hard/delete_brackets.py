@@ -19,8 +19,17 @@
 
 
 def shortener(text):
+    left = text.rfind("(")
+    right = text.find(")", text.rfind("("), )
+    skobki = text[left:right + 1]
+    bez_skobok = text.replace(skobki, "")
 
-    return None
+    left1 = bez_skobok.rfind("(")
+    right1 = bez_skobok.find(")", bez_skobok.rfind("("), )
+    skobki1 = bez_skobok[left1:right1 + 1]
+    bez_skobok1 = bez_skobok.replace(skobki1, "")
+
+    return bez_skobok1
 
 
 if __name__ == '__main__':
